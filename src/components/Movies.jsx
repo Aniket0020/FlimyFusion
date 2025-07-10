@@ -10,6 +10,8 @@ const Movies = ({ AddToWatchList, RemoveWatchList, watchlist }) => {
   const [movies, setMovies] = useState([]);
   const [pageNo, setPageNo] = useState(1)
 
+ const API_KEY = process.env.REACT_APP_TMDB_API_KEY;
+
 
   const handlePrev = () => {
     if (pageNo === 1) {
@@ -27,11 +29,10 @@ const Movies = ({ AddToWatchList, RemoveWatchList, watchlist }) => {
   useEffect(() => {
     axios
       .get(
-        `https://api.themoviedb.org/3/movie/popular?api_key=0b23e15ab99466e4685c4324d6bd9578&language=en-US&page=${pageNo}`)
+        `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=${pageNo}`
+      )
       .then(function (res) {
         setMovies(res.data.results);
-
-
       });
   }, [pageNo]);
 
