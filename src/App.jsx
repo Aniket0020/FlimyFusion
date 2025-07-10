@@ -45,7 +45,7 @@ const App = () => {
 
         <Routes>
           <Route
-            path="/FlimyFusion"
+            path="/"
             element={
               <>
                 {/* <Banner /> */}

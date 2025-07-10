@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <div className="flex border space-x-8 items-center pl-5 py-4 ">
       <img className="w-[30px]" src={logo} alt="" />
-      <Link className=" text-2xl" to="/FlimyFusion">
+      <Link className=" text-2xl" to="/">
         Movies
       </Link>
       <Link className=" text-2xl" to="/Watchlist">
